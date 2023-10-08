@@ -1,0 +1,8 @@
+MangaOnline/Client.Manager/bin/
+MangaOnline/Client.Manager/obj/
+MangaOnline/Service.MangaOnline/bin/
+MangaOnline/Service.MangaOnline/obj/
+MangaOnline/Service.Schedule/bin/
+MangaOnline/Service.Schedule/obj/
+MangaOnline/Service.MangaOnline/appsettings.json
+MangaOnline/Service.Schedule/appsettings.json

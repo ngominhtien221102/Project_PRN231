@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "88d1a121-dbed-4304-99fe-d8e45f451c3b": {
+      "ProjectGuid": "88d1a121-dbed-4304-99fe-d8e45f451c3b",
+      "DisplayName": "Service.MangaOnline",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "67b9c76f-faf8-41ca-937b-207b62a44d3a": {
+      "ProjectGuid": "67b9c76f-faf8-41ca-937b-207b62a44d3a",
+      "DisplayName": "Service.Schedule",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

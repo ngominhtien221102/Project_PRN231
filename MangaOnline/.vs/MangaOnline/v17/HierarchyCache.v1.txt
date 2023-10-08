@@ -1,0 +1,227 @@
+﻿++Solution 'MangaOnline' ‎(2 of 3 projects)
+i:{00000000-0000-0000-0000-000000000000}:MangaOnline.sln
+++Client.Manager (unloaded)
+i:{00000000-0000-0000-0000-000000000000}:Client.Manager
+++Service.MangaOnline
+i:{00000000-0000-0000-0000-000000000000}:Service.MangaOnline
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\bin\debug\net6.0\service.mangaonline.dll
+++Connected Services 
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>447
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:>446
+++Dependencies
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>444
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:>445
+++Properties
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\properties\
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\properties\
+++Caching
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\caching\
+++Commons
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\
+++Controllers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\controllers\
+++Extensions
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\
+++FilterPermissions
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\filterpermissions\
+++Hubs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\hubs\
+++Models
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\
+++RequestModels
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\
+++ResponseModels
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\
+++appsettings.json
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\appsettings.json
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\appsettings.json
+++Program.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\program.cs
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\program.cs
+++templateEmail.json
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\templateemail.json
+++WeatherForecast.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\weatherforecast.cs
+++No service dependencies discovered
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>449
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:>448
+++Analyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:analyzers
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:analyzers
+++Frameworks
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:frameworks
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:frameworks
+++Packages
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:packages
+++launchSettings.json
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\properties\launchsettings.json
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\properties\launchsettings.json
+++CachingService.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\caching\cachingservice.cs
+++ICachingService.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\caching\icachingservice.cs
+++ActionFilterEnum.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\actionfilterenum.cs
+++AllCategory.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\allcategory.cs
+++ChapterEnum.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\chapterenum.cs
+++MangaStatusEnum.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\mangastatusenum.cs
+++NotificationEnum.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\notificationenum.cs
+++StatusUser.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\statususer.cs
+++UserRoleEnum.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\commons\userroleenum.cs
+++AuthController.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\controllers\authcontroller.cs
+++FileController.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\controllers\filecontroller.cs
+++MangaController.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\controllers\mangacontroller.cs
+++WeatherForecastController.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\controllers\weatherforecastcontroller.cs
+++ExtensionManga.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\extensionmanga.cs
+++IExtensionManga.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\iextensionmanga.cs
+++IJwtTokenHandler.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\ijwttokenhandler.cs
+++IMapObject.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\imapobject.cs
+++Job.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\job.cs
+++JwtTokenHandler.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\jwttokenhandler.cs
+++MapObject.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\extensions\mapobject.cs
+++ActionFilter.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\filterpermissions\actionfilter.cs
+++FilterPermission.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\filterpermissions\filterpermission.cs
+++NotificationHub.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\hubs\notificationhub.cs
+++Author.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\author.cs
+++Category.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\category.cs
+++CategoryManga.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\categorymanga.cs
+++Chaptere.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\chaptere.cs
+++Comment.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\comment.cs
+++FollowList.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\followlist.cs
+++History.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\history.cs
+++IpUserVote.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\ipuservote.cs
+++Manga.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\manga.cs
+++MangaOnlineV1DevContext.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\mangaonlinev1devcontext.cs
+++Notification.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\notification.cs
+++Page.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\page.cs
+++User.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\user.cs
+++UserToken.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\models\usertoken.cs
+++ActionModel.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\actionmodel.cs
+++AddMangaRequest.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\addmangarequest.cs
+++ChangePasswordRequest.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\changepasswordrequest.cs
+++HistoryRequest.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\historyrequest.cs
+++LoginRequest.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\loginrequest.cs
+++RegisterUserRequest.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\registeruserrequest.cs
+++UpdateMangaRequest.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\requestmodels\updatemangarequest.cs
+++ChapterResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\chapterresponse.cs
+++CmtResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\cmtresponse.cs
+++DataResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\dataresponse.cs
+++FollowResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\followresponse.cs
+++HomeResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\homeresponse.cs
+++LoginResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\loginresponse.cs
+++MangaResponse.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\mangaresponse.cs
+++UserTokenHeader.cs
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\responsemodels\usertokenheader.cs
+++appsettings.Development.json
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\appsettings.development.json
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\users\tinht\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.16\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\users\tinht\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.16\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\sdk\6.0.101\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.1\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\microsoft.aspnetcore.app
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:g:\web\prn-project\prn231-su23\mangaonline\service.mangaonline\microsoft.netcore.app
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\microsoft.netcore.app
+++BCrypt.Net (0.1.0)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>489
+++Microsoft.AspNetCore.OData (8.2.0)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>491
+++Microsoft.AspNetCore.SignalR (1.1.0)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>490
+++Microsoft.EntityFrameworkCore.Design (6.0.16)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>486
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.16)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>485
+++Newtonsoft.Json (13.0.3)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>488
+++Swashbuckle.AspNetCore (6.2.3)
+i:{88d1a121-dbed-4304-99fe-d8e45f451c3b}:>487
+++Service.Schedule
+i:{00000000-0000-0000-0000-000000000000}:Service.Schedule
+++RepeatingService.cs
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:g:\web\prn-project\prn231-su23\mangaonline\service.schedule\repeatingservice.cs
+++Projects
+i:{67b9c76f-faf8-41ca-937b-207b62a44d3a}:projects
