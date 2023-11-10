@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Service.MangaOnline.Commons;
 using Service.MangaOnline.Extensions;
 using Service.MangaOnline.FilterPermissions;
-using Service.MangaOnline.Hubs;
 using Service.MangaOnline.Models;
 using Service.MangaOnline.RequestModels;
 using Service.MangaOnline.ResponseModels;
@@ -21,17 +20,14 @@ public class MangaController : ODataController
     private readonly MangaOnlineV1DevContext _context;
     private readonly IExtensionManga _extensionManga;
     private readonly IMapObject _map;
-    // private readonly NotificationHub _notificationHub;
-    private IHubContext<NotificationHub> HubContext;
     
     public MangaController(MangaOnlineV1DevContext mangaOnlineV1DevContext,
-        IExtensionManga extensionManga, IMapObject mapObject,NotificationHub notificationHub,IHubContext<NotificationHub> hubcontext)
+        IExtensionManga extensionManga, IMapObject mapObject)
     {
         _context = mangaOnlineV1DevContext;
         _extensionManga = extensionManga;
         _map = mapObject;
-        // _notificationHub = notificationHub;
-        HubContext = hubcontext;
+
     }
 
     [EnableQuery]
@@ -337,7 +333,6 @@ public class MangaController : ODataController
             };
             _context.Chapteres.Add(chaptere);
             _context.SaveChanges();
-            HubContext.Clients.All.SendAsync("LoadNotification", MangaId);
             return Ok();
         }
         catch

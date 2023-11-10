@@ -10,11 +10,6 @@
         <PackageReference Include="BCrypt.Net" Version="0.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.16" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
@@ -34,6 +29,10 @@
       <_ContentIncludedByDefault Remove="wwwroot\image\manga-image\0ea4aafe-8a25-467c-a851-8e661b96708b.jpg" />
       <_ContentIncludedByDefault Remove="wwwroot\image\payment\payment-bg.png" />
       <_ContentIncludedByDefault Remove="wwwroot\image\payment\qrcode.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BusinessObject\BusinessObject.csproj" />
     </ItemGroup>
 
 </Project>

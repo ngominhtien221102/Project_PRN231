@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.OData;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 using Service.MangaOnline.Extensions;
-using Service.MangaOnline.Hubs;
 using Service.MangaOnline.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +28,6 @@ builder.Services.AddSingleton<IJwtTokenHandler, JwtTokenHandler>();
 builder.Services.AddSingleton<IExtensionManga, ExtensionManga>();
 builder.Services.AddSingleton<IMapObject, MapObject>();
 builder.Services.AddScoped<MangaOnlineV1DevContext>();
-builder.Services.AddScoped<NotificationHub>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -62,9 +60,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseSession();
-
-// http://localhost:5098/hubs/notification
-app.MapHub<NotificationHub>("/hubs/notification");
 
 app.Run();
 
