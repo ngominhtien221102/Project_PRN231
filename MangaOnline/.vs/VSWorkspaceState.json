@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Client.Manager",
     "\\Client.Manager\\Views",
-    "\\Client.Manager\\Views\\Public"
+    "\\Client.Manager\\Views\\Public",
+    "\\Client.Manager\\Views\\Shared"
   ],
-  "SelectedNode": "\\Client.Manager\\Views\\Public\\DetailManga.cshtml",
+  "SelectedNode": "\\MangaOnline.sln",
   "PreviewInSolutionExplorer": false
 }

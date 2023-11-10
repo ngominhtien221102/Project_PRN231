@@ -1,0 +1,5 @@
+D:\Kỳ 8\PRN231_Code\Project_PRN231\MangaOnline\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\Kỳ 8\PRN231_Code\Project_PRN231\MangaOnline\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kỳ 8\PRN231_Code\Project_PRN231\MangaOnline\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\Kỳ 8\PRN231_Code\Project_PRN231\MangaOnline\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\Kỳ 8\PRN231_Code\Project_PRN231\MangaOnline\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
