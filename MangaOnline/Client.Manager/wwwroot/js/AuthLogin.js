@@ -42,6 +42,7 @@ function login(ipAddress) {
             window.location.href = urlClient;
         },
         error: function (xhr, status, error) {
+            OffLoading();
             ShowNotificationError(xhr.responseJSON.error??'Đăng nhập thất bại');
         }
     });
