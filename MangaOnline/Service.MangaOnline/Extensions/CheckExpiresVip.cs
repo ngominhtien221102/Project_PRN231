@@ -5,7 +5,7 @@ using Service.MangaOnline.Models;
 
 namespace Service.MangaOnline.Extensions;
 
-public static class Job
+public static class CheckExpiresVip
 {
     public static async void CheckUserVip()
     {

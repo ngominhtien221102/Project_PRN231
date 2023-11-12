@@ -34,7 +34,7 @@ public class RepeatingService : BackgroundService
     {
         if (DateTime.Now.Hour == 0)
         {
-            Job.CheckUserVip();
+            CheckExpiresVip.CheckUserVip();
             await Task.Delay(3600000); // 1h
         }
     }

@@ -3,7 +3,7 @@ using Service.MangaOnline.ResponseModels;
 
 namespace Service.MangaOnline.Extensions;
 
-public interface IMapObject
+public interface IMapping
 { 
     MangaResponse MapMangaResponse(Manga manga);
     

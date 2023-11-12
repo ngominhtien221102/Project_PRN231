@@ -18,10 +18,10 @@ public class MangaController : ODataController
 {
     private readonly MangaOnlineV1DevContext _context;
     private readonly IExtensionManga _extensionManga;
-    private readonly IMapObject _map;
+    private readonly IMapping _map;
     
     public MangaController(MangaOnlineV1DevContext mangaOnlineV1DevContext,
-        IExtensionManga extensionManga, IMapObject mapObject)
+        IExtensionManga extensionManga, IMapping mapObject)
     {
         _context = mangaOnlineV1DevContext;
         _extensionManga = extensionManga;

@@ -31,8 +31,6 @@ public class FilterPermission : ActionFilterAttribute
                 UserRole = action.UserRole;
             }
 
-            // var newToken = WriteToken("john_doe", "123@gmail.com", "userVip", "12345");
-
             // action public
             if (UserRole == null)
             {
@@ -152,27 +150,3 @@ public class FilterPermission : ActionFilterAttribute
         return userToken;
     }
 }
-
-// Request with custom header
-// $.ajax({
-//     type: "POST",
-//     contentType: "application/json",
-//     url: "http://localhost:5098/WeatherForecast/PostWeatherForecast",
-//     dataType: 'json',
-//     headers: {"ACCESS_TOKEN" : localStorage.getItem('ACCESS_TOKEN')},
-//     success: function(success) {
-//     }
-// });
-
-// Lưu giá trị vào local storage
-// localStorage.setItem('ACCESS_TOKEN', '123');
-// get
-// localStorage.getItem('ACCESS_TOKEN');
-
-
-// public override void OnResultExecuting(ResultExecutingContext context)
-// {
-//     var newToken = WriteToken("john_doe", "123@gmail.com", "admin", "12345");
-//     context.HttpContext.Request.Headers["Authorization"] = newToken;
-//     base.OnResultExecuting(context);
-// }
