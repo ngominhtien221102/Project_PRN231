@@ -23,6 +23,24 @@ namespace Service.MangaOnline.Controllers
             return Ok(user);
         }
 
+        [HttpGet("GetAll")]
+        public IActionResult GetAllUser()
+        {
+            var user = _context.Users.ToList();
+            return Ok(user);
+        }
+
+        [HttpPut("ChangeIsActive")]
+        public IActionResult ChangeIsActive(Guid id)
+        {
+            var user = _context.Users.FirstOrDefault(x => x.Id == id);
+            if (user == null)
+                return NotFound();
+            user!.IsActive = !user.IsActive;
+            _context.SaveChanges();
+            return Ok();
+        }
+
         [HttpGet("GetUserToken/{id}")]
         public IActionResult GetUserToken(Guid id)
         {
