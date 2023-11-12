@@ -57,9 +57,7 @@
                                                 <a asp-page="/Public/CategoriesList" asp-route-cateName="@category.Id">@category.Name</a>
                                             }
                                         </span>
-                                        <span class="card__rate">
-                                            <i class="icon ion-ios-star"></i>@manga.Star
-                                        </span>
+                                        
                                         <span class="card__rate" style="margin-left: 5px;">
                                             <i class="icon ion-ios-eye"></i>
                                             @await Component.InvokeAsync("FormatNumber", manga.ViewCount)
@@ -156,9 +154,7 @@
                                                 <a asp-page="/Public/CategoriesList" asp-route-cateName="@category.Id">@category.Name</a>
                                             }
                                         </span>
-                                        <span class="card__rate">
-                                            <i class="icon ion-ios-star"></i>@manga.Star
-                                        </span>
+                                        
                                         <span class="card__rate" style="margin-left: 5px;">
                                             <i class="icon ion-ios-eye"></i>
                                             @await Component.InvokeAsync("FormatNumber", manga.ViewCount)
@@ -203,7 +199,7 @@
                                             }
                                         </span>
                                         <span class="card__rate">
-                                            <i class="icon ion-ios-star"></i>@manga.Star
+                                            
                                             <span class="card__rate" style="margin-left: 5px;">
                                                 <i class="icon ion-ios-eye"></i>
                                                 @await Component.InvokeAsync("FormatNumber", manga.ViewCount)
@@ -262,7 +258,6 @@
                                     }
                                 </span>
                                 <span class="card__rate">
-                                    <i class="icon ion-ios-star"></i>@manga.Star
                                     <span class="card__rate" style="margin-left: 5px;">
                                         <i class="icon ion-ios-eye"></i>
                                         @await Component.InvokeAsync("FormatNumber", manga.ViewCount)

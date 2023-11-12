@@ -1,0 +1,104 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Client.Manager
+build_property.RootNamespace = Client.Manager
+build_property.ProjectDir = D:\PRN231_Code\Project_PRN231\MangaOnline\Client.Manager\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PRN231_Code\Project_PRN231\MangaOnline\Client.Manager
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Auth/AuthChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBdXRoQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Auth/AuthLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBdXRoTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Auth/AuthRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBdXRoUmVnaXN0cmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Auth/AuthVerifyEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBdXRoVmVyaWZ5RW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Auth/HistoryAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxIaXN0b3J5QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Auth/UpdateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxVcGRhdGVBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Manager/AddChapter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBZGRDaGFwdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Manager/AddManga.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxBZGRNYW5nYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Manager/FollowManga.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxGb2xsb3dNYW5nYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Manager/ListMangaManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxMaXN0TWFuZ2FNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Manager/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Public/DetailChapter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXERldGFpbENoYXB0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Public/DetailManga.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXERldGFpbE1hbmdhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Public/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Shared/_LayoutAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_Code/Project_PRN231/MangaOnline/Client.Manager/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-f1uphd7zbo

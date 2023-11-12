@@ -40,10 +40,7 @@
 						<!-- card content -->
 						<div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-9">
 							<div class="card__content">
-								<div class="card__wrap">
-									<span class="card__rate"><i class="icon ion-ios-star"></i>@manga.Star</span>
-								</div>
-
+								
 								<ul class="card__meta">
 									<li><span><i class="fa fa-user"></i> Tác giả: </span>@manga.AuthorName</li>
 									<li>
@@ -79,15 +76,6 @@
 						</div>
 						<!-- end card content -->
 					</div>
-					<div>
-                    	<ul class="ratings" style="{margin-top: 5px}">
-                          <li class="star" id="star-5" onclick="handleRate(5)"></li>
-                          <li class="star" id="star-4" onclick="handleRate(4)"></li>
-                          <li class="star" id="star-3" onclick="handleRate(3)"></li>
-                          <li class="star" id="star-2" onclick="handleRate(2)"></li>
-                          <li class="star" id="star-1" onclick="handleRate(1)"></li>
-                        </ul>
-                    </div>
 					<div class="follow">
 							<div id="not-follow">
 								<input id="mangaId" value="@manga.Id" hidden/>
@@ -163,89 +151,8 @@
 </section>
 <!-- end details -->
 
-<!-- content -->
-<section class="content">
-	<div class="content__head">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<!-- content title -->
-					<h2 class="content__title">Diễn đàn</h2>
-					<!-- end content title -->
-
-					<!-- content tabs nav -->
-					<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Bình luận</a>
-						</li>
-					</ul>
-					<!-- end content tabs nav -->
-
-					<!-- content mobile tabs nav -->
-					<div class="content__mobile-tabs" id="content__mobile-tabs">
-						<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<input type="button" value="Bình Luận">
-							<span></span>
-						</div>
-
-						<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
-							<ul class="nav nav-tabs" role="tablist">
-								<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Bình luận</a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- end content mobile tabs nav -->
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-8 col-xl-8">
-				<!-- content tabs -->
-				<div class="tab-content" id="myTabContent">
-					<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
-						<div class="row">
-							<!-- comments -->
-							<div class="col-12">
-								<div class="comments">
-									<ul class="comments__list">
-										
-									</ul>
-
-									<div class="form">
-										<textarea id="value-cmt" class="form__textarea" placeholder="Viết bình luận"></textarea>
-										<button onclick="postCmt()" class="form__btn">Gửi</button>
-									</div>
-								</div>
-							</div>
-							<!-- end comments -->
-						</div>
-					</div>
-				</div>
-				<!-- end content tabs -->
-			</div>
-		</div>
-	</div>
-</section>
-
-
 
 <script>
-   let rate;
-	const renderRate = (_rate)=>{
-		  for (let i=1;i<=5;i++){
-                  			 document.getElementById(`star-${i}`).style.color = "#c9c9c9";
-                  		 }
-		  for (let i=1;i<=_rate;i++){
-         			 document.getElementById(`star-${i}`).style.color = "#e19414";
-         		 }
-	}
-	const handleRate= (_rate)=>{
-		 rate = _rate;
-		 renderRate(rate);
-	}
 	
 	if(GetUserData()!=null){
         const role = GetUserData().role;
@@ -255,16 +162,11 @@
 		if (role==='Admin'||role==='UserVip'){
 			$('.td-vip').hide();
 		}
-		// $('#da-follow').show();
-        // $('#not-follow').show();
 	}
    
 
 	 $(document).ready(function() {
-	    renderRate();
 		checkFollow();
-		loadCmt();
-
 	 })
 
 	 const renderBtnFollow = (check)=>{
@@ -293,53 +195,6 @@
 		}else {
 			window.location.href = 'http://localhost:5030/Auth/AuthLogin';
 		}
-	 }
-
-	 const postCmt = ()=>{
-		if(GetUserData()!=null){
-			 var mangaId = $("#mangaId").val();
-			 var user = GetUserData();
-			 var value = $("#value-cmt").val();
-			 $("#value-cmt").val("");
-			 if(!value){
-					ShowNotificationError("Không được để trống");
-					 return;
-			 }
-				 $.ajax({
-					url: urlServiceManga + `/Manga/Comment?userId=${user.userId}&mangaId=${mangaId}&value=${value}`,
-					type:"post",
-					success: function (result) {
-					  //== render cmt
-					  loadCmt();
-					}
-				});
-		}else {
-			window.location.href = 'http://localhost:5030/Auth/AuthLogin';
-		}
-	 }
-
-	  const loadCmt = ()=>{
-	     var mangaId = $("#mangaId").val();
-		     $.ajax({
-                url: urlServiceManga + `/Manga/Comment?mangaId=${mangaId}`,
-                success: function (result) {
-					var content="";
-				     result.data.forEach((value)=>{
-					     content+=`
-						    <li class="comments__item">
-												<div class="comments__autor">
-														<img class="comments__avatar" src="${value.imgUser || '/lib/img/avatar-default.jpg'}" alt="">
-													<span class="comments__name">${value.nameUser}</span>
-													<span class="comments__time">${value.date}</span>
-												</div>
-												<p class="comments__text">${value.content}</p>
-											</li>
-
-						 `
-						 $(".comments__list").html(content);
-					 })
-                }
-            });
 	 }
 
 	  const unFollow=()=>{

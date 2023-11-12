@@ -98,23 +98,23 @@ public class AuthController : Controller
 
         // send mail
         var userId = Guid.NewGuid();
-        var config = new ConfigurationBuilder().AddJsonFile("templateEmail.json").Build();
-        var sendMail = _extensionManga.SendEmailAsync(
-            request.Email,
-            "[MangaOnline] Xác thực email"
-            , config["templateEmail:head"]
-              + "http://localhost:5098/Auth/VerifyEmailRegister?userId="
-              + userId
-              + config["templateEmail:last"]);
-        if (!sendMail.Result)
-        {
-            return BadRequest(new
-            {
-                success = false,
-                status = 400,
-                error = _extensionManga.GetEnumDescription(NotificationEnum.SendEmailError)
-            });
-        }
+        //var config = new ConfigurationBuilder().AddJsonFile("templateEmail.json").Build();
+        //var sendMail = _extensionManga.SendEmailAsync(
+        //    request.Email,
+        //    "[MangaOnline] Xác thực email"
+        //    , config["templateEmail:head"]
+        //      + "http://localhost:5098/Auth/VerifyEmailRegister?userId="
+        //      + userId
+        //      + config["templateEmail:last"]);
+        //if (!sendMail.Result)
+        //{
+        //    return BadRequest(new
+        //    {
+        //        success = false,
+        //        status = 400,
+        //        error = _extensionManga.GetEnumDescription(NotificationEnum.SendEmailError)
+        //    });
+        //}
 
         var createUser = new User()
         {

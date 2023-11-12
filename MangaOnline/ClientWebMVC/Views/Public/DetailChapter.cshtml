@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Đọc truyện";
+}
+@* http://localhost:5030/public/DetailChapter?id=4360DDDF-49E1-424C-BA83-F52E6488A272 *@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div style="margin-top: 93px;">
+    <style>
+        #manga-pdf{
+            width: 100%;
+            height: 95vh;
+        }
+    </style>
+    <iframe id="manga-pdf" src="" frameborder="0"></iframe>
+</div>
+</body>
+</html>
+
+<script>
+$(document).ready(function () {
+    GetIpUserByGetFile();
+});
+
+function GetFile(ipAddress) {
+    var id = GetURLParameter('id');
+    $.ajax({
+        url: `http://localhost:5098/Manga/GetChapter?id=${id}&ipAddress=${ipAddress}`,
+        type: "GET",
+        headers: {"ACCESS_TOKEN" : localStorage.getItem('ACCESS_TOKEN')},
+        success: function (response) {
+            var url = '/pdf/'+response.data;
+            $('#manga-pdf').attr('src', url);
+            OffLoading();
+        },
+        error: function () {
+            ShowNotificationError('Lỗi sảy ra');
+        }
+    });
+}
+function GetIpUserByGetFile() {
+    OpenLoading();
+    $.ajax({
+        url: 'https://httpbin.org/ip',
+        method: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            // Dữ liệu trả về sẽ có dạng {"origin": "địa chỉ IP"}
+            const ipAddress = data.origin;
+            GetFile(ipAddress);
+        },
+        error: function () {
+            OffLoading();
+            ShowNotificationError('Thử lại đường truyền không ổn định');
+            login(1111);
+        }
+    });
+}
+</script>

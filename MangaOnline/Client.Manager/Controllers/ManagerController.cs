@@ -4,6 +4,7 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using Service.MangaOnline.Commons;
 using Service.MangaOnline.Models;
+using System;
 
 namespace Client.Manager.Controllers;
 
@@ -50,6 +51,8 @@ public class ManagerController : Controller
 
     public async Task<IActionResult> ViewAddChapter(Guid id)
     {
+        ViewData["Error"] = TempData["Error"]; // Lấy giá trị từ TempData
+        TempData.Remove("Error"); // Xóa TempData sau khi sử dụng
         var response = await client.GetAsync(ServiceMangaUrl + "manga/GetManga?id="+ id);
         string responseBody = await response.Content.ReadAsStringAsync();
         var option = new JsonSerializerOptions
@@ -62,10 +65,16 @@ public class ManagerController : Controller
     public async Task<IActionResult> AddChapter()
     {
         IFormFile file = Request.Form.Files.GetFile("fileUp")!;
-
+        if (String.IsNullOrEmpty(Request.Form["ChapNumber"]) || file == null || file.Length == 0)
+        {
+            Guid id = Guid.Parse(Request.Form["mangaId"]);
+            TempData["Error"] = "ChapterNumber is required";
+            return RedirectToAction("ViewAddChapter", new { id });
+        }
         Chaptere chaptere = new Chaptere();
+        
         chaptere.ChapterNumber = int.Parse(Request.Form["ChapNumber"]);
-        chaptere.Id = Guid.NewGuid();
+            chaptere.Id = Guid.NewGuid();
         chaptere.SubId = 0;
         chaptere.MangaId = Guid.Parse(Request.Form["mangaId"]);
         chaptere.Name = " Chapter "+ Request.Form["ChapNumber"];
@@ -73,6 +82,7 @@ public class ManagerController : Controller
         chaptere.Status = Int32.Parse(Request.Form["Status"]);
         chaptere.IsActive = true;
         //chaptere.FilePDF = _logicHandler.CreatePDF(file);
+        
         
         string apiEndpoint = "http://localhost:5098/File/CreateImage";
         var formData = new MultipartFormDataContent();

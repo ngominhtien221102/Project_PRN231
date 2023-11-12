@@ -36,9 +36,9 @@ function LoadTopMonthManga(listManga) {
                     <span class="card__category">
                     `+loadCategory(manga.categoryMangas)+`
                     </span>
-                    <span class="card__rate">
-                        <i class="icon ion-ios-star"></i>`+manga.star+`
-                    </span>
+                    //<span class="card__rate">
+                    //    <i class="icon ion-ios-star"></i>`+manga.star+`
+                    //</span>
                     <span class="card__rate" style="margin-left: 5px;">
                         <i class="icon ion-ios-eye"></i>
                         `+formatView(manga.viewCount)+`
