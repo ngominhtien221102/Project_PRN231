@@ -29,18 +29,24 @@
                                     <input type="text" name="mangaId" hidden value="@manga.Id" >
                                 </div>
                                 <div class="input-group-add">
+                                    @if (ViewData["Error"] != null)
+                                    {
+                                        <div class="alert alert-danger">
+                                            @ViewData["Error"]
+                                        </div>
+                                    }
                                     <p class="input-title">Chapter Number</p>
-                                    <input type="number" name="ChapNumber" class="sign__input">
+                                    <input type="number" name="ChapNumber" class="sign__input" required>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="input-group-add">
                                     <p class="input-title" required
                                     >UpLoad</p>
-                                    <input type="file"  id="fileInput"
+                                    <input required type="file" id="fileInput"
                                            class="input-file-image"
                                            accept=".pdf"  name="fileUp" onchange="setfilename(this.value)"/>
-                                    <input type="text" name="wpName" id="wpName" class="sign__input">
+                                    <input required type="text" name="wpName" id="wpName" class="sign__input">
                                 </div>
                                 
                                 <div class="input-group-add">
@@ -59,15 +65,11 @@
                                 
                             </div>
                             
-                           
-                            
                             <div class="col-sm-4">
                                 <div>
                                     <div style="max-height: 120px;margin-bottom:10px">
                                         <button class="sign__btn" id="submitBtn" type="submit">Thêm chapter</button>
                                     </div>
-                                         @*  <div style="display:none;color: green;font-size:12px;" id="done_success">Add thành công chapter mới</div> *@
-                                         @* <div style="display:none" id="take_notice">@ViewData["done"]</div> *@
                                 </div>
                             </div>
                              

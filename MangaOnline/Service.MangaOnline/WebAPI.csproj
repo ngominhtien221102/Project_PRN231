@@ -9,7 +9,6 @@
     <ItemGroup>
         <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
         <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
