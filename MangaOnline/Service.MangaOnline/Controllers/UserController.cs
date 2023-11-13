@@ -41,7 +41,7 @@ namespace Service.MangaOnline.Controllers
 
             bool? isActiveEnum = IsActive switch
             {
-                "Bị khóa" => false,
+                "Khóa" => false,
                 "Bình thường" => true,
                 _ => null
             };
@@ -70,7 +70,7 @@ namespace Service.MangaOnline.Controllers
             }
             index = index == 0 ? 1 : index;
             // var PageIndex = index;
-            if (index > LastPage)
+            if (index > LastPage && listUser.Count > 0)
             {
                 return NotFound();
             }

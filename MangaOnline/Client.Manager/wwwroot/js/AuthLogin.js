@@ -20,7 +20,7 @@ function login(ipAddress) {
     var email = $('#email').val();
     var password = $('#newPasswordInput').val();
     $.ajax({
-        url: 'http://localhost:5098/Auth/AuthLogin',
+        url: `http://localhost:5098/Auth/AuthLogin`,
         type: "POST",
         data: {
             email: email,
@@ -50,7 +50,7 @@ function login(ipAddress) {
 function GetIpUser() {
     OpenLoading();
     $.ajax({
-        url: 'https://httpbin.org/ip',
+        url: `https://httpbin.org/ip`,
         method: 'GET',
         dataType: 'json',
         success: function (data) {

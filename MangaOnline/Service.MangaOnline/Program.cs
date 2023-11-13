@@ -66,7 +66,6 @@ app.Run();
 
 static IEdmModel GetEdmModel()
 {
-
     ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
     builder.EntitySet<Manga>("Manga");
     return builder.GetEdmModel();

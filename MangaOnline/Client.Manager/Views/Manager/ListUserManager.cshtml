@@ -37,8 +37,8 @@
                         <ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-role">
                             <li>Tất cả</li>
                             <li>Admin</li>
-                            <li>Vip User</li>
-                            <li>Normal User</li>
+                            <li>Người dùng bình thường</li>
+                            <li>Người dùng Vip</li>
                         </ul>
                     </div>
 
@@ -60,7 +60,7 @@
 
                     <div class="label-apply">
                         <div class="filter__item" style="margin-right: 20px;">
-                            <a href="/manage/user/list">
+                            <a href="/User/ListUser">
                                 <div class="btn-status-plink">
                                     <i class="icon ion-ios-refresh-circle"></i>
                                 </div>
@@ -121,7 +121,7 @@
                                     @roleString
                                     @if (user.RoleId == 3)
                                     {
-                                    <p>hết hạn: @user.UserToken.Expires.ToString("dd/MM/yyyy")</p>
+                                    <p>Hết hạn: @user.UserToken.Expires.ToString("dd/MM/yyyy")</p>
                                     }
                                 </th>
                                 <th>
@@ -198,7 +198,7 @@
 <script>
     function ChangeIsActive(userId, isActive) {
         $.ajax({
-            url: 'http://localhost:5098/api/User/ChangeIsActive',
+            url: `http://localhost:5098/api/User/ChangeIsActive?id=${userId}`,
             type: "PUT",
             headers: { "ACCESS_TOKEN": localStorage.getItem('ACCESS_TOKEN') },
             data: {

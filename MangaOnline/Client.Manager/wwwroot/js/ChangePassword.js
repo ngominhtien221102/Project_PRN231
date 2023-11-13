@@ -66,7 +66,7 @@ $(document).ready(function() {
             return;
         }
         $.ajax({
-            url: 'http://localhost:5098/Auth/ChangePassword',
+            url:`http://localhost:5098/Auth/ChangePassword`,
             type: "PUT",
             headers: {"ACCESS_TOKEN" : localStorage.getItem('ACCESS_TOKEN')},
             data: {

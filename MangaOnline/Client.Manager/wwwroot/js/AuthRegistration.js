@@ -71,7 +71,7 @@ function showNewPassword() {
 }
 function Register() {
     $.ajax({
-        url: 'http://localhost:5098/Auth/AuthRegister',
+        url: `http://localhost:5098/Auth/AuthRegister`,
         type: "POST",
         data: {
             FullName: $('#fullName').val(),
