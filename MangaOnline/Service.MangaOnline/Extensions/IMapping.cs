@@ -8,4 +8,6 @@ public interface IMapping
     MangaResponse MapMangaResponse(Manga manga);
     
     ChapterResponse MapChapterResponse(Chaptere manga);
+
+    UserResponse MapUserResponse(User user);
 }

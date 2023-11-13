@@ -2,8 +2,6 @@
 
 public enum ActionFilterEnum
 {
-    GetWeatherForecast,
-    PostWeatherForecast,
     ChangePassword,
     GetUserById,
     CreateManga,

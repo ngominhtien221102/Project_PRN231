@@ -9,16 +9,6 @@ public static class ActionFilter
     {
         new ActionModel()
         {
-            Action = ActionFilterEnum.GetWeatherForecast,
-            UserRole = null
-        },
-        new ActionModel()
-        {
-            Action = ActionFilterEnum.PostWeatherForecast,
-            UserRole = new[] { UserRoleEnum.Admin, UserRoleEnum.UserVip }
-        },
-        new ActionModel()
-        {
             Action = ActionFilterEnum.ChangePassword,
             UserRole = new[] { UserRoleEnum.Admin, UserRoleEnum.UserVip, UserRoleEnum.UserNormal }
         },
@@ -35,6 +25,11 @@ public static class ActionFilter
         new ActionModel()
         {
             Action = ActionFilterEnum.UpdateManga,
+            UserRole = new[] { UserRoleEnum.Admin }
+        },
+        new ActionModel()
+        {
+            Action = ActionFilterEnum.DeleteManga,
             UserRole = new[] { UserRoleEnum.Admin }
         },
         new ActionModel()

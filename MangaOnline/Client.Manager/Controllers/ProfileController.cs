@@ -31,10 +31,9 @@ namespace Client.Manager.Controllers
             HttpResponseMessage response2 = await client.GetAsync(baseUrl + "User/GetUserToken/" + id);
             string responseBody2 = await response2.Content.ReadAsStringAsync();
             var option2 = new JsonSerializerOptions();
+            
             UserToken? token = JsonSerializer.Deserialize<UserToken>(responseBody2, option2);
             ViewBag.ExpiresTime = token.Expires;
-
-
 
             return View("/Views/Manager/UserProfile.cshtml", user);
         }
