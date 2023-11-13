@@ -2,21 +2,35 @@
     ViewData["Title"] = "History";
 }
 <div>
-<div class="container">
-        <div class="row" style="margin-top: 100px; margin-left: 20%; margin-right: 80%; margin-bottom:100px; padding-top: 50px;">
-                <table class="table" style="color: white">
-                  <thead>
-                    <tr>
-                      <th scope="col" style="min-width:220px;">Date</th>
-                      <th scope="col" style="min-width:120px;">Value</th>
-                      <th scope="col" style="min-width:120px;">To</th>
-                      <th scope="col" style="min-width:200px;"></th>
-                    </tr>
-             </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-             
+    <div class="container" style="    margin-top: 100px;">
+        <div id="navbar" style=" min-height:25px">
+            <span id="text"></span>
+        </div>
+        <div class="row">
+            <div class="col-12" style="padding: 0px;    min-height: 70vh;">
+                <div class="title-table" style="color: #fff">
+                    <h3 style="text-align: center;">Lịch sử giao dịch</h3>
+                </div>
+                <div class="" style="padding: 0px; margin: 0px; color: #fff">
+                    <div class="sign__form" style="min-width:600px;padding: 0px; width: 100%;">
+                        <table border="1px" class="table table-hover table-dark user-list">
+                            <thead>
+                                <tr style="background-color: #413f47;">
+                                    <th scope="col">Gói</th>
+                                    <th scope="col">Ngày đăng ký</th>
+                                    <th scope="col">Ngày hết hạn</th>
+                                    <th scope="col">Trạng thái</th>
+                                    <th scope="col">Số tiền thanh toán</th>
+                                    <th scope="col">Mã giao dịch</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -27,17 +41,43 @@
             $.each(result, function (index, value) {
                 $("tbody").append($("<tr>"));
                 appendElement = $("tbody tr").last();
-                appendElement.append($("<td>").html(value["date"]));
-                appendElement.append($("<td>").html(value["value"]+" USDC"));
-                appendElement.append($("<td>").html("MangaOnline"));
-               appendElement.append($("<td>").html("<a href=" + "https://goerli.etherscan.io/tx/" +value["hash"] + " target=\"_blank\" >View on block explore</a>"));
+
+                var hashValue = value["hash"];
+                var hashText;
+                var hashStatus;
+                var hashMoney;
+
+                if (hashValue == "1") {
+                    hashText = "1 tuần";
+                    hashStatus = "Đã thanh toán";
+                    hashMoney = "50000VNĐ";
+                } else if (hashValue == "2") {
+                    hashText = "1 tháng";
+                    hashStatus = "Đã thanh toán";
+                    hashMoney = "100000VNĐ";
+                } else if (hashValue == "3") {
+                    hashText = "Chưa thanh toán";
+                    hashStatus = "Chưa thanh toán";
+                    hashMoney = "";
+                } else {
+                    hashText = "Không xác định";
+                    hashStatus = "Không xác định";
+                    hashMoney = "";
+                }
+                console.log("hash: ", hashValue);
+                appendElement.append($("<td>").html(hashText));
+                appendElement.append($("<td>").html(value["from"]));
+                appendElement.append($("<td>").html(value["to"]));
+                appendElement.append($("<td>").html(hashStatus));
+                appendElement.append($("<td>").html(hashMoney));
+                appendElement.append($("<td>").html(value["value"]));
             });
         }
         function ShowAllReservation() {
             $("table tbody").html("");
             var user = GetUserData();
             $.ajax({
-                url: "http://localhost:5098/Auth/History?gmail="+ user.email,
+                url: "http://localhost:5098/Auth/History?userId=" + user.userId,
                 success: function (result) {
                     console.log(result.data.value);
                     renderList(result.data.value);

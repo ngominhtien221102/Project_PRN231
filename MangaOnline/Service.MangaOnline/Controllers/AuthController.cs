@@ -6,6 +6,7 @@ using Service.MangaOnline.FilterPermissions;
 using Service.MangaOnline.Models;
 using Service.MangaOnline.RequestModels;
 using Service.MangaOnline.ResponseModels;
+using WebAPI.RequestModels;
 
 namespace Service.MangaOnline.Controllers;
 
@@ -98,23 +99,23 @@ public class AuthController : Controller
 
         // send mail
         var userId = Guid.NewGuid();
-        //var config = new ConfigurationBuilder().AddJsonFile("templateEmail.json").Build();
-        //var sendMail = _extensionManga.SendEmailAsync(
-        //    request.Email,
-        //    "[MangaOnline] Xác thực email"
-        //    , config["templateEmail:head"]
-        //      + "http://localhost:5098/Auth/VerifyEmailRegister?userId="
-        //      + userId
-        //      + config["templateEmail:last"]);
-        //if (!sendMail.Result)
-        //{
-        //    return BadRequest(new
-        //    {
-        //        success = false,
-        //        status = 400,
-        //        error = _extensionManga.GetEnumDescription(NotificationEnum.SendEmailError)
-        //    });
-        //}
+        var config = new ConfigurationBuilder().AddJsonFile("templateEmail.json").Build();
+        var sendMail = _extensionManga.SendEmailAsync(
+            request.Email,
+            "[MangaOnline] Xác thực email"
+            , config["templateEmail:head"]
+              + "http://localhost:5098/Auth/VerifyEmailRegister?userId="
+              + userId
+              + config["templateEmail:last"]);
+        if (!sendMail.Result)
+        {
+            return BadRequest(new
+            {
+                success = false,
+                status = 400,
+                error = _extensionManga.GetEnumDescription(NotificationEnum.SendEmailError)
+            });
+        }
 
         var createUser = new User()
         {
@@ -231,9 +232,9 @@ public class AuthController : Controller
 
     [HttpGet("History")]
     // [FilterPermission(Action = ActionFilterEnum.UpdateAccount)]
-    public async Task<IActionResult> History(String gmail)
+    public async Task<IActionResult> History(String userId)
     {
-        var list = _context.Histories.Where(x => x.User == gmail).ToList();
+        var list = _context.Histories.Where(x => x.User == userId).ToList();
         return Ok(new
         {
             success = true,
@@ -241,6 +242,21 @@ public class AuthController : Controller
             data = Json(list)
         });
     }
+
+    [HttpPost("CreateHistory")]
+    public async Task<IActionResult> CreateHistory(History history)
+    {
+        var listHistoriesOld =
+                _context.Histories.Where(x => x.Hash == ((int)3).ToString() && x.User == history.User);
+        if (listHistoriesOld.Any())
+        {
+            _context.RemoveRange(listHistoriesOld);
+        }
+        _context.Histories.Add(history);
+        _context.SaveChangesAsync();
+        return Ok();
+    }
+
 
     [HttpPut("DeUpdateRole")]
   //  [FilterPermission(Action = ActionFilterEnum.UpdateAccount)]
@@ -254,6 +270,34 @@ public class AuthController : Controller
             success = true,
             status = 200,
         });
+    }
+
+    [HttpPost("UpdateAccountVip")]
+    public async Task<IActionResult> UpdateAccountVip(ResultBanking result)
+    {
+        User user = _context.Users.FirstOrDefault(c => c.Id.ToString() == result.userId);
+        if(user == null) {
+            return NotFound();
+        }
+        user.RoleId = 3;
+        _context.SaveChanges();
+
+        History history = _context.Histories.FirstOrDefault(c => c.User == result.userId);
+        if(result.vnp_Amount == 5000000)
+        {
+            history.From = DateTime.Now.ToString("dd/MM/yyyy");
+            history.To = DateTime.Now.AddDays(7).ToString("dd/MM/yyyy");
+            history.Hash = "1";
+        }
+        if (result.vnp_Amount == 10000000)
+        {
+            history.From = DateTime.Now.ToString("dd/MM/yyyy");
+            history.To = DateTime.Now.AddDays(30).ToString("dd/MM/yyyy");
+            history.Hash = "2";
+        }
+        history.Value = result.vnp_TxnRef.ToString();
+        _context.SaveChanges();
+        return Ok();
     }
 
     [HttpPost("CreateTransaction")]
