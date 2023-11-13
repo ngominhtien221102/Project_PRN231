@@ -46,7 +46,7 @@ function GetFile(ipAddress) {
 function GetIpUserByGetFile() {
     OpenLoading();
     $.ajax({
-        url: 'https://httpbin.org/ip',
+        url: `https://httpbin.org/ip`,
         method: 'GET',
         dataType: 'json',
         success: function (data) {

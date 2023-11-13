@@ -1,0 +1,227 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Service.MangaOnline.Commons
+@using Service.MangaOnline.ResponseModels
+
+@{
+    Layout = "_Layout";
+    var listUser = (List<UserResponse>?)ViewData["ListUser"];
+    var isActive = ViewData["isActive"];
+    var role = ViewData["role"];
+    var index = (int)ViewData["index"]!;
+    var lastPage = (int)ViewData["LastPage"]!;
+}
+
+@{
+    var routeUrl = Url.RouteUrl(ViewContext.RouteData.Values);
+    routeUrl = routeUrl + "?role=" + role + "&isActive=" + isActive + "&index=";
+}
+
+<link rel="stylesheet" href="~/css/MangaListManager.css">
+
+<div class="container border-list">
+    <div class="row">
+        <div class="col-lg-12">
+            <form method="get">
+                @* filter *@
+                <div class="border-filter">
+                    <!-- filter item -->
+                    <div class="filter__item" id="filter__role">
+                        <span class="filter__item-label">Vai trò:</span>
+
+                        <div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-role" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <input type="button" value="@role">
+                            <input asp-for="@role" type="hidden">
+                            <span></span>
+                        </div>
+
+                        <ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-role">
+                            <li>Tất cả</li>
+                            <li>Admin</li>
+                            <li>Người dùng bình thường</li>
+                            <li>Người dùng Vip</li>
+                        </ul>
+                    </div>
+
+                    <div class="filter__item" id="filter__status">
+                        <span class="filter__item-label">Trạng thái:</span>
+
+                        <div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <input type="button" value="@isActive">
+                            <input asp-for="@isActive" type="hidden">
+                            <span></span>
+                        </div>
+
+                        <ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-status">
+                            <li>Tất cả</li>
+                            <li>Khóa</li>
+                            <li>Bình thường</li>
+                        </ul>
+                    </div>
+
+                    <div class="label-apply">
+                        <div class="filter__item" style="margin-right: 20px;">
+                            <a href="/User/ListUser">
+                                <div class="btn-status-plink">
+                                    <i class="icon ion-ios-refresh-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="filter__item">
+                            <button class="btn-status-plink" type="submit">
+                                Áp dụng
+                            </button>
+                        </div>
+                    </div>
+                    <!-- end filter item -->
+                </div>
+                @* filter *@
+            </form>
+            <div class="main-box clearfix">
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark user-list">
+                        <thead>
+                            <tr>
+                                <th scope="col">Avatar</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Số điện thoại</th>
+                                <th scope="col">Vai trò</th>
+                                <th scope="col" @*style="width: 88px;*@">Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (listUser != null)
+                            {
+                            @foreach (var user in listUser)
+                            {
+                            <tr>
+                                <th style="text-align: center;padding: 10px 0px;">
+                                    @if (user.Avatar is null)
+                                    {
+                                    <img class="avatar" src="/lib/img/avatar-default.jpg" alt="">
+                                    }
+                                    else
+                                    {
+                                    <img class="avatar" src="/image/avartar-user/@user.Avatar" alt="">
+                                    }
+                                </th>
+                                <th>@user.FullName</th>
+                                <th>@user.Email</th>
+                                <th>@user.PhoneNumber</th>
+                                <th>
+                                    @{
+                                    var roleString = user.RoleId switch
+                                    {
+                                    (int)UserRoleEnum.Admin => "Admin",
+                                    (int)UserRoleEnum.UserNormal => "Tài khoản bình thường",
+                                    (int)UserRoleEnum.UserVip => "Tài khoản Vip",
+                                    _ => ""
+                                    };
+                                    }
+                                    @roleString
+                                    @if (user.RoleId == 3)
+                                    {
+                                    <p>Hết hạn: @user.UserToken.Expires.ToString("dd/MM/yyyy")</p>
+                                    }
+                                </th>
+                                <th>
+                                    <div style="display: flex;    justify-content: center;">
+                                        <span id="isActive-@user.Id">
+                                            @if (user.IsActive)
+                                            {
+                                            <button class="btn-status-green" type="submit" onclick="ChangeIsActive('@user.Id','@user.IsActive')">
+                                                <i class="icon ion-ios-eye"></i>
+                                            </button>
+                                            }
+                                            else
+                                            {
+                                            <button class="btn-status-red" type="submit" onclick="ChangeIsActive('@user.Id','@user.IsActive')">
+                                                <i class="icon ion-ios-eye-off"></i>
+                                            </button>
+                                            }
+                                        </span>
+                                    </div>
+                                </th>
+                            </tr>
+                            }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- paginator -->
+                @if (listUser.Any())
+                {
+                <div class="col-12">
+                    <ul class="paginator">
+                        @{
+                        var back = index > 1 ? "" : "disabled";
+                        var next = index != lastPage ? "" : "disabled";
+                        }
+                        <li class="paginator__item paginator__item--prev @back">
+
+                            <a href="@routeUrl@(index - 1)" class="">
+                                <i class="icon ion-ios-arrow-back"></i>
+                            </a>
+                        </li>
+                        @{
+                        if (index > 1)
+                        {
+                            <li class="paginator__item ">
+                                <a href="@routeUrl@(index - 1)">@(index - 1)</a>
+                            </li>
+                        }
+                            <li class="paginator__item paginator__item--active">
+                                <a>@index</a>
+                            </li>
+                        if (index != lastPage)
+                        {
+                            <li class="paginator__item">
+                                <a href="@routeUrl@(index + 1)">@(index + 1)</a>
+                            </li>
+                        }
+                        }
+                        <li class="paginator__item paginator__item--next @next">
+                            <a href="@routeUrl@(index + 1)">
+                                <i class="icon ion-ios-arrow-forward"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                }
+                <!-- end paginator -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Notification.js"></script>
+<script>
+    function ChangeIsActive(userId, isActive) {
+        $.ajax({
+            url: `http://localhost:5098/api/User/ChangeIsActive?id=${userId}`,
+            type: "PUT",
+            headers: { "ACCESS_TOKEN": localStorage.getItem('ACCESS_TOKEN') },
+            data: {
+                userId: userId
+            }, success: function () {
+                ShowNotificationSuccess('Cập nhật thành công');
+                if (isActive === 'True') {
+                    $('#isActive-' + userId).html(`
+                          <button class="btn-status-red" type="submit" onclick="ChangeIsActive('${userId}','False')">
+                                <i class="icon ion-ios-eye-off"></i>
+                          </button>
+                        `);
+                } else {
+                    $('#isActive-' + userId).html(`
+                          <button class="btn-status-green" type="submit" onclick="ChangeIsActive('${userId}','True')">
+                                <i class="icon ion-ios-eye"></i>
+                          </button>
+                          `);
+                }
+
+            }, error: function () {
+                ShowNotificationError('Cập nhật thất bại');
+            }
+        });
+    }
+</script>

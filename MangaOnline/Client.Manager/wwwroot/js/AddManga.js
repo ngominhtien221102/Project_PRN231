@@ -151,7 +151,7 @@ function GetCategoryNameById(id) {
 
 function AjaxManga(name, authorName, myTextarea, createdAt, isActive, category, status, formData) {
     $.ajax({
-        url: 'http://localhost:5098/File/CreateImage',
+        url: `http://localhost:5098/File/CreateImage`,
         type: "POST",
         data: formData,
         contentType: false,
@@ -172,7 +172,7 @@ function AjaxManga(name, authorName, myTextarea, createdAt, isActive, category, 
 
 function AjaxCreateManga(name, authorName, myTextarea, createdAt, isActive, category, status, image) {
     $.ajax({
-        url: 'http://localhost:5098/Manga/CreateManga',
+        url: `http://localhost:5098/Manga/CreateManga`,
         type: "POST",
         headers: {"ACCESS_TOKEN": localStorage.getItem('ACCESS_TOKEN')},
         data: {
@@ -194,7 +194,7 @@ function AjaxCreateManga(name, authorName, myTextarea, createdAt, isActive, cate
 
 function AjaxUpdateManga(mangaId, name, authorName, myTextarea, createdAt, isActive, category, status, image) {
     $.ajax({
-        url: 'http://localhost:5098/Manga/UpdateManga',
+        url: `http://localhost:5098/Manga/UpdateManga`,
         type: "PUT",
         headers: {"ACCESS_TOKEN": localStorage.getItem('ACCESS_TOKEN')},
         data: {

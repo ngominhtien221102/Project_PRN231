@@ -18,10 +18,10 @@ public class MangaController : ODataController
 {
     private readonly MangaOnlineV1DevContext _context;
     private readonly IExtensionManga _extensionManga;
-    private readonly IMapObject _map;
+    private readonly IMapping _map;
     
     public MangaController(MangaOnlineV1DevContext mangaOnlineV1DevContext,
-        IExtensionManga extensionManga, IMapObject mapObject)
+        IExtensionManga extensionManga, IMapping mapObject)
     {
         _context = mangaOnlineV1DevContext;
         _extensionManga = extensionManga;
@@ -388,119 +388,6 @@ public class MangaController : ODataController
             return Ok(list);
         }
      return BadRequest();
-    }
-
-    [HttpGet("CheckRating")]
-    public IActionResult CheckRate(Guid? userId, Guid mangaId, int rate)
-    {
-        try
-        {
-            var manga = _context.Mangas.FirstOrDefault(x => x.Id == mangaId);
-            var track = _context.IpUserVotes.FirstOrDefault(x => x.UserId == userId && x.MangaId == mangaId);
-            if (track is not null)
-            {
-                return Ok(new
-                {
-                    code = 200,
-                    data = true,
-                    value = track.Rate,
-                });
-            }
-            else
-            {
-                return Ok(new
-                {
-                    code = 200,
-                    data = false,
-                });
-            }
-        }
-        catch
-        {
-            return NotFound();
-        }
-    }
-
-    [HttpGet("Rating")]
-    public IActionResult Rate(Guid? userId, Guid mangaId, int rate)
-    {
-        try
-        {
-            var manga = _context.Mangas.FirstOrDefault(x => x.Id == mangaId);
-            var _track = _context.IpUserVotes.FirstOrDefault(x => x.UserId == userId && x.MangaId == mangaId);
-          /*  if (_track is not null) {
-                manga.Star = (manga.Star * manga.RateCount - _track.Rate + rate) / manga.RateCount;
-                _track.Rate = rate;
-            }
-            else {
-                IpUserVote track = new IpUserVote();
-                track.UserId = userId;
-                track.MangaId = mangaId;
-                track.Rate = rate;
-            }*/
-            return Ok();
-        }
-        catch
-        {
-            return NotFound();
-        }
-    }
-
-    [HttpGet("Comment")]
-    public IActionResult Comment(Guid mangaId)
-    {
-        try
-        {
-            var _track = _context.Comments.Where(x => x.MangaId == mangaId).OrderBy(x=>x.CreatedAt).ToList();
-            List<CmtResponse> _list = new();
-            foreach (var item in _track)
-            {
-                var user = _context.Users.FirstOrDefault(x => x.Id == item.UserId);
-                var _item = new CmtResponse();
-                _item.Id = item.Id;
-                _item.MangaId = mangaId;
-                _item.UserId = user.Id;
-                _item.date =item.CreatedAt.ToString("dd/MM/yy");
-                _item.Content = item.Content;
-                _item.NameUser = user.FullName;
-                _item.ImgUser = user.Avatar;
-                _list.Add(_item);
-
-            }
-            return Ok(new
-            {
-                code = 200,
-                data = _list,
-            }); ;
-        }
-        catch
-        {
-            return NotFound();
-        }
-    }
-
-    [HttpPost("Comment")]
-    public IActionResult PostComment(Guid userId,Guid mangaId,string value)
-    {
-        try
-        {
-            var cmt = new Comment();
-            cmt.Id = Guid.NewGuid();
-            cmt.MangaId = mangaId;
-            cmt.CreatedAt = DateTime.Now;
-            cmt.Content = value;
-            cmt.DislikedCount = 0;
-            cmt.LikedCount = 0;
-            cmt.UserId = userId;
-            cmt.IsActive = true;
-            _context.Comments.Add(cmt);
-            _context.SaveChanges();
-            return Ok();
-        }
-        catch
-        {
-            return NotFound();
-        }
     }
 
     [HttpGet("listManga")]

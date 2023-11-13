@@ -64,7 +64,7 @@
                         <div class="header__content">
                             <!-- header logo -->
                             <a asp-controller="Home" asp-action="Index" class="header__logo">
-                                PRN231
+                                PRN231 Manga Online
                             </a>
                             <!-- end header logo -->
                             <!-- header nav -->
@@ -134,16 +134,16 @@
                                             <a asp-area="" asp-controller="Auth" asp-action="AuthChangePassword">Đổi mật khẩu</a>
                                         </li>
                                         <li id="pay-history" style="display: none">
-                                            <a href="/auth/historyaccount">Lịch sử giao dịch</a>
+                                            <a href="/Auth/historyaccount">Lịch sử giao dịch</a>
                                         </li>
                                         <li id="user-levelUp" style="display: none">
                                             <a href="/Auth/UpdateAccount">Nâng cấp tài khoản</a>
                                         </li>
-                                        @* <li id="user-manager" style="display: none"> *@
-                                        @*     <a href="/manage/user/list">Quản lý người dùng</a> *@
-                                        @* </li> *@
+                                         <li id="user-manager" style="display: none">
+                                            <a asp-controller="User" asp-action="ListUser">Quản lý người dùng</a>
+                                        </li> 
                                         <li id="manga-manager" style="display: none">
-                                            <a href="/manager/ListManga">Quản lý Manga</a>
+                                            <a href="/Manager/ListManga">Quản lý Manga</a>
                                         </li>
                                         <li id="add-manga-manager" style="display: none">
                                             <a href="/Manager/AddManga">Thêm Manga</a>
@@ -245,34 +245,34 @@
     <script src="~/lib/bootstrap/dist/js/photoswipe-ui-default.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/main.js"></script>
     <script>
-              $(document).ready(function () {
-                 var user = GetUserData();
-                 if (user!==null){
-                     $("#tab-follow").show();
-                     var curent = $("#tab-follow").attr('href');
-                     curent += user.userId
-                     $("#tab-follow").attr('href', curent);
+        $(document).ready(function () {
+            var user = GetUserData();
+            if (user !== null) {
+                $("#tab-follow").show();
+                var curent = $("#tab-follow").attr('href');
+                curent += user.userId
+                $("#tab-follow").attr('href', curent);
 
-                     var current = $("#profile").attr('href');
-                     current += user.userId;
-                     $("#profile").attr('href', current);
-                     debugger
-                     current = $("#avatar").attr('src');
-                     if(user.avartar != null)
-                        current += user.avartar;
-                     else {
-                         current += "avatar-default.jpg"
-                     }
-                     $("#avatar").attr('src', current);
-                 }
+                var current = $("#profile").attr('href');
+                current += user.userId;
+                $("#profile").attr('href', current);
+                debugger
+                current = $("#avatar").attr('src');
+                if (user.avartar != null)
+                    current += user.avartar;
+                else {
+                    current += "avatar-default.jpg"
+                }
+                $("#avatar").attr('src', current);
+            }
 
-                  $("#search-button").on("click",() => {
-                    var data = $("#search-input").val();
-                    window.location.href = "/public/search?query=" + data;
+            $("#search-button").on("click", () => {
+                var data = $("#search-input").val();
+                window.location.href = "/public/search?query=" + data;
             })
-            });
+        });
 
-            function GetUserData() {
+        function GetUserData() {
             const user = localStorage.getItem("USER_DATA");
             return $.parseJSON(user);
             // {"userId":"ef20386b-2335-4f65-87b2-819e1aef6612","userName":"traicv","email":"enm55606@nezid.com","role":"UserNormal","avartar":null}

@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 function LoadData() {
     $.ajax({
-        url: 'http://localhost:5098/Manga/HomeManga',
+        url: `http://localhost:5098/Manga/HomeManga`,
         type: "GET",
         headers: {"ACCESS_TOKEN" : localStorage.getItem('ACCESS_TOKEN')},
         success: function (response) {

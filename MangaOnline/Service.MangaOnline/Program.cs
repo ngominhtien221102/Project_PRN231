@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MangaOnlineV1DevContext>();
 builder.Services.AddSingleton<IJwtTokenHandler, JwtTokenHandler>();
 builder.Services.AddSingleton<IExtensionManga, ExtensionManga>();
-builder.Services.AddSingleton<IMapObject, MapObject>();
+builder.Services.AddSingleton<IMapping, Mapping>();
 builder.Services.AddScoped<MangaOnlineV1DevContext>();
 builder.Services.AddCors(options =>
 {
@@ -45,7 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseCors(builder => builder
-    .WithOrigins("http://localhost:5030") // Địa chỉ nguồn gốc mà bạn muốn cho phép truy cập (có thể thêm nhiều địa chỉ khác nhau)
+    .WithOrigins("http://localhost:5030") 
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials());
@@ -66,7 +66,6 @@ app.Run();
 
 static IEdmModel GetEdmModel()
 {
-
     ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
     builder.EntitySet<Manga>("Manga");
     return builder.GetEdmModel();

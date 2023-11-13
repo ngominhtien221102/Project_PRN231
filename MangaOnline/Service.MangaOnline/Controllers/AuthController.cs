@@ -97,7 +97,7 @@ public class AuthController : Controller
             });
         }
 
-        // send mail
+        //send mail
         var userId = Guid.NewGuid();
         var config = new ConfigurationBuilder().AddJsonFile("templateEmail.json").Build();
         var sendMail = _extensionManga.SendEmailAsync(

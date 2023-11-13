@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "Service.MangaOnli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientWebMVC", "Client.Manager\ClientWebMVC.csproj", "{7B0F9519-4D21-4C8A-B242-2A83BACC33F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Schedule", "Service.Schedule\Service.Schedule.csproj", "{67B9C76F-FAF8-41CA-937B-207B62A44D3A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{33432EAD-093B-4C02-BBAB-A71352C88BCA}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{7B0F9519-4D21-4C8A-B242-2A83BACC33F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0F9519-4D21-4C8A-B242-2A83BACC33F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0F9519-4D21-4C8A-B242-2A83BACC33F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67B9C76F-FAF8-41CA-937B-207B62A44D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67B9C76F-FAF8-41CA-937B-207B62A44D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67B9C76F-FAF8-41CA-937B-207B62A44D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67B9C76F-FAF8-41CA-937B-207B62A44D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{33432EAD-093B-4C02-BBAB-A71352C88BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33432EAD-093B-4C02-BBAB-A71352C88BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33432EAD-093B-4C02-BBAB-A71352C88BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
