@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3gl9CTWXv7s32c5rGsTTurjnAr38nenv/+gEpt6UZNVU0QlpO4Sm9IdoxahDCCt5YqgsiIaespu7z+jX5lpRdg==",
+  "dgSpecHash": "NIl5l/gCCaFeRocCUYHWP8KqrVV8EfaPZ7XOS4rgb6hjU2upIW+kUogcgxyVDZeN3prAnVKCsHFNBfSjU8+Aqw==",
   "success": true,
-  "projectFilePath": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\Project_PRN231\\Project_PRN231\\MangaOnline\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\Project_PRN231\\MangaOnline\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

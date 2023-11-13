@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('#btn-user').show();
         switch (role) {
             case 'Admin':
-                // $('#user-manager').show();
+                $('#user-manager').show();
                 $('#manga-manager').show();
                 $('#admin-icon').show();
                 $('#add-manga-manager').show();

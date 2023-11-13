@@ -1,5 +1,6 @@
 ﻿using Service.MangaOnline.Models;
 using Service.MangaOnline.ResponseModels;
+using System;
 
 namespace Service.MangaOnline.Extensions;
 
@@ -48,6 +49,28 @@ public class Mapping : IMapping
             Status = manga.Status,
             IsActive = manga.IsActive,
             FilePdf = manga.FilePdf
+        };
+    }
+
+    public UserResponse MapUserResponse(User user)
+    {
+        return new UserResponse
+        {
+            Id = user.Id,
+            FullName = user.FullName,
+            Email = user.Email,
+            PhoneNumber = user.PhoneNumber,
+            IsActive = user.IsActive,
+            Avatar = user.Avatar,
+            RoleId = user.RoleId,
+            UserToken =  new UserToken
+                {
+                    Id = user.UserToken.Id,
+                    UserId = user.Id,
+                    Email = user.Email,
+                    Expires = user.UserToken.Expires,
+                    Value= user.UserToken.Value
+                }
         };
     }
 }

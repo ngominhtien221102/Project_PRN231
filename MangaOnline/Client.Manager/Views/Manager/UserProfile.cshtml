@@ -20,8 +20,7 @@
                 <div class="sign__content" style="padding-top: 100px;">
                     <!-- add form -->
                     <form method="post" action="/profile/UpdateProfile" enctype="multipart/form-data" class="sign__form form-addManga">
-                        @*<input asp-for="RequestUser.UserId" value="@userProfile!.Id" hidden/>*@
-                        <input name="Id" value="@Model.Id" hidden/>
+                        <input name="Id" value="@Model.Id" hidden />
                         <div class="title-addManga">
                             <h1>Thông tin cá nhân</h1>
                         </div>
@@ -29,68 +28,48 @@
                             <div class="col-sm-5">
                                 <div class="input-group-add">
                                     <p class="input-title">Họ và tên</p>
-                                    @*<input asp-for="RequestUser.FullName" value="@userProfile!.FullName" type="text" required maxlength="20"*@
-                                    <input value=@Model.FullName type="text" required maxlength="20"
-                                           class="sign__input" placeholder="dưới 20 ký tự"
-                                            name="FullName">
-
+                                    <input value="@Model.FullName" type="text" required maxlength="20" class="sign__input" placeholder="dưới 20 ký tự" name="FullName">
                                     <p class="noti" id="name-message"></p>
                                 </div>
                                 <div class="input-group-add">
                                     <p class="input-title">SĐT</p>
-                                    @*<input asp-for="RequestUser.Phone" value="@userProfile!.PhoneNumber" type="text" required maxlength="10" class="sign__input" placeholder="10 số">*@
-                                    <input value=@Model.PhoneNumber type="text" required maxlength="10" 
-                                        class="sign__input" placeholder="10 số"
-                                        name="PhoneNumber">
+                                    <input value="@Model.PhoneNumber" type="text" required maxlength="10" class="sign__input" placeholder="10 số" name="PhoneNumber">
                                     <p class="noti"></p>
                                 </div>
                                 <div class="input-group-add" style="color: #fff">
-                                    <p class="input-title" >Email</p>
-                                    <p>
-                                        @Model.Email
-                                    </p>
+                                    <p class="input-title">Email</p>
+                                    <p>@Model.Email</p>
                                     <p class="noti"></p>
                                 </div>
                                 <div class="input-group-add" style="color: #fff">
                                     <p class="input-title">Vai trò</p>
-                                    <p>
-                                        @{
-                                            var role = @Model.RoleId switch
-                                            {
-                                                1 => "Admin",
-                                                2 => "Tài khoản bình thường",
-                                                3 => "Tài khoản Vip",
-                                                _ => ""
-                                                };
-                                        }
-                                        @role
-                                        @if (@Model.RoleId==3)
+                                    @{
+                                        var role = @Model.RoleId switch
                                         {
-                                            <p>hết hạn: @ViewBag.ExpiresTime.ToString("dd/MM/yyyy")</p>
-                                        }
-                                    </p>
+                                            1 => "Admin",
+                                            2 => "Tài khoản bình thường",
+                                            3 => "Tài khoản Vip",
+                                            _ => ""
+                                        };
+                                    }
+                                    <p>@role</p>
+                                    @if (@Model.RoleId == 3)
+                                    {
+                                        <p>Hết hạn: @ViewBag.ExpiresTime.ToString("dd/MM/yyyy")</p>
+                                    }
                                     <p class="noti"></p>
                                 </div>
                             </div>
                             <div class="col-sm-5 update-image-file">
-                                @{
-                                    if (@Model.Avatar is not null)
-                                    {
-                                        <img class="" src="/image/manga-image/@Model.Avatar" 
-                                             id="preview" style="border-radius: 50%; width: 250px;height: 250px">
-                                    }
-                                    else
-                                    {
-                                        <img class="" src="~/lib/img/avatar-default.jpg" id="preview"
-                                             style="border-radius: 50%;width: 250px;height: 250px">
-                                    }
+                                @if (@Model.Avatar is not null)
+                                {
+                                    <img class="" src="/image/manga-image/@Model.Avatar" id="preview" style="border-radius: 50%; width: 250px;height: 250px">
                                 }
-                                <input
-                                    type="file"
-                                    id="fileInput"
-                                    name="fileUp"
-                                    class="input-file-image"
-                                    accept=".png, .jpg, .jpeg"/>
+                                else
+                                {
+                                    <img class="" src="~/lib/img/avatar-default.jpg" id="preview" style="border-radius: 50%;width: 250px;height: 250px">
+                                }
+                                <input type="file" id="fileInput" name="fileUp" class="input-file-image" accept=".png, .jpg, .jpeg" />
                             </div>
                         </div>
                         <div class="col-sm-6" style="max-height: 120px;">
