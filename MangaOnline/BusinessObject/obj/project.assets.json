@@ -2379,11 +2379,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\MangaOnline\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\Project_PRN231\\Project_PRN231\\MangaOnline\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\MangaOnline\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\Project_PRN231\\Project_PRN231\\MangaOnline\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\MangaOnline\\BusinessObject\\obj\\",
+      "outputPath": "D:\\Kỳ 8\\PRN231_Code\\Project_PRN231\\Project_PRN231\\Project_PRN231\\MangaOnline\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
